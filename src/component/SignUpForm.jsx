@@ -31,7 +31,7 @@ function SignUpForm(){
     }
 
     function checkIfUserExists(){
-        webClient.post('/user/checkIfUserExists', user,{ timeout: 5000 }).then(response => {
+        webClient.post('/user/checkIfUserExists', user).then(response => {
             console.log("resp : " +response);
             alert("Username already exists! Try with different username");
         }).catch(error => {
