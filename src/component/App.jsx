@@ -11,11 +11,11 @@ function App() {
         <div className="app-container">
             <Routes>
                 <Route path="/" element={<Welcome />} />
+                <Route element={<Protect />}> 
                 <Route path="/SignUpPage" element={<SignUp />} />
-                <Route path="/LoginPage" element={<Login />} />
-                <Route element={<Protect />}>
+                <Route path="/LoginPage" element={<Login />} /> 
                 <Route path="/Home" element={<Home1/>} />
-                </Route>
+                </Route> 
             </Routes>
         </div>
     </BrowserRouter>

@@ -1,6 +1,8 @@
+
 import React from 'react'
-import { Outlet,Navigate } from 'react-router-dom';
-import { Login } from '../component/Login';
+import { Outlet } from 'react-router-dom';
+import Login from '../component/Login';
+
 const authUser = () =>{
     const user ={login : false};
 
@@ -8,7 +10,7 @@ const authUser = () =>{
 }
 const Protect = () => {
     const isAuth = authUser();
-  return isAuth ? <Outlet/> : <Navigate to ="/" />
+  return isAuth ? <Outlet/> : <Login />
 }
 
 export default Protect
